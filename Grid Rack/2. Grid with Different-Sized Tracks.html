@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Different-Sized Grid Tracks</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr; /* Fixed width, 2 fractions, and 1 fraction */
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item">Fixed Width</div>
+  <div class="grid-item">Flexible (2x)</div>
+  <div class="grid-item">Flexible</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto-Fit Grid Tracks</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item">Item 1 (longer)</div>
+  <div class="grid-item">Item 2 (shorter)</div>
+  <div class="grid-item">Item 3 (medium)</div>
+</body>
+</html>

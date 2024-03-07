@@ -1,0 +1,107 @@
+grid-template-columns: ;
+grid-template-rows: ;
+grid-template-areas: ;
+grid-template: ;
+grid-column-gap: ;
+grid-row-gap: ;
+grid-gap: ;
+justify-items: start;
+align-items: ;
+align-items: start;
+place-content: ;
+justify-content:;
+align-content: ;
+justify-self: ;
+align-self: ;
+place-content: ;
+grid-auto-columns: ;
+grid-auto-rows: ;
+grid-auto-flow: row;
+grid-auto-flow: column;
+grid: ;
+grid-column-start: ;
+grid-column-end: ;
+grid-row-start: ;
+grid-row-end: ;
+grid-column: ;
+grid-row: ;
+grid-area: ;
+justify-self: start;
+justify-self: ;
+align-self: start;
+align-items: ;
+align-self: ;
+place-self: ;
+place-items: ;
+
+// Grid Properties Explained:
+
+Template Properties:
+
+    grid-template-columns: Defines the width and number of columns in your grid. You can use various values:
+        repeat(n, track): Creates n columns, each with the specified track size. track can be a fixed size (e.g., 100px), a fraction (e.g., 1fr), or auto (flexible).
+        A list of sizes: Example: grid-template-columns: 200px 1fr auto; creates three columns: 200px fixed, 1fr flexible, and auto-filling remaining space.
+    grid-template-rows: Similar to grid-template-columns but defines rows.
+    grid-template-areas: Defines the named areas within the grid for grid items. You specify a grid of names separated by spaces, and then use those names in the grid-area property of each item.
+    grid-template: A shorthand for both grid-template-columns and grid-template-rows.
+
+Spacing Properties:
+
+    grid-gap: Sets the spacing between both rows and columns (optional).
+    grid-column-gap: Sets the spacing between columns only (optional).
+    grid-row-gap: Sets the spacing between rows only (optional).
+
+Alignment and Justification Properties:
+
+    justify-items: Controls the horizontal alignment of items within their grid cells:
+        start: Aligns items to the left edge of the cell.
+        center: Centers items horizontally within the cell.
+        end: Aligns items to the right edge of the cell.
+        stretch (default): Stretches items to fill the entire cell width.
+    align-items: Controls the vertical alignment of items within their grid cells:
+        start: Aligns items to the top edge of the cell.
+        center: Centers items vertically within the cell.
+        end: Aligns items to the bottom edge of the cell.
+        stretch: Stretches items to fill the entire cell height.
+    justify-content: Controls the horizontal alignment of all items in a row relative to the available space in the row:
+        start: Aligns all items to the left edge of the row.
+        center: Centers all items horizontally within the row.
+        end: Aligns all items to the right edge of the row.
+        space-between: Distributes items evenly with space between them.
+        space-around: Distributes items evenly with space around them (including the beginning and end).
+    align-content: Controls the vertical alignment of all rows in a grid relative to the available space in the grid:
+        start: Aligns all rows to the top of the grid.
+        center: Centers all rows vertically within the grid.
+        end: Aligns all rows to the bottom of the grid.
+        space-between: Distributes rows evenly with space between them.
+        space-around: Distributes rows evenly with space around them (including the top and bottom).
+
+Positioning Properties:
+
+    justify-self: Similar to justify-items but controls the alignment of an individual item within its cell.
+    align-self: Similar to align-items but controls the vertical alignment of an individual item within its cell.
+    place-items: Shorthand for setting both justify-items and align-items for an item.
+    place-content: Shorthand for setting both justify-content and align-content for a whole grid.
+
+Grid Auto-sizing Properties:
+
+    grid-auto-columns: Defines the implicit width for new grid columns if not explicitly defined by grid-template-columns.
+    grid-auto-rows: Defines the implicit height for new grid rows if not explicitly defined by grid-template-rows.
+    grid-auto-flow: Controls the flow of grid items when the number of items overflows the defined grid tracks:
+        row (default): Fills grid by adding new rows.
+        column: Fills grid by adding new columns.
+
+Grid Positioning Properties (Shorthands):
+Grid Positioning Properties (Shorthands):
+
+    grid-column-end: Specifies the ending column (exclusive) for an item.
+    grid-row-start: Specifies the starting row for an item.
+    grid-row-end: Specifies the ending row (exclusive) for an item.
+    grid-column: Shorthand for setting both grid-column-start and grid-column-end.
+    grid-row: Shorthand for setting both grid-row-start and grid-row-end.
+    grid-area: A shorthand for defining both grid-column-start, grid-column-end, grid-row-start, and grid-row-end for an item, specifying the rectangular area it occupies within the grid (row-start / column-start / row-end / column-end).
+
+Additional Note:
+
+    place-self: While not specifically mentioned after the explanation of place-items, it's worth noting that place-self is a shorthand for setting both justify-self and align-self for an individual item, similar to how place-items works for items within their cells.
+

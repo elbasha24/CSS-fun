@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Area, Track, Cell, and Line Example</title>
+<style>
+.grid-container {
+  /* Create a 3x3 grid with 10px gutters */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold; /* Emphasize grid lines */
+}
+
+/* Style grid items for visual clarity */
+.item1 { background-color: #ccc; }
+.item2 { background-color: #eee; }
+.item3 { background-color: #ccc; }
+.item4 { background-color: #eee; }
+.item5 { background-color: #ccc; }
+
+/* Define grid areas with explicit names */
+.item1 { grid-area: header; }
+.item2 { grid-area: sidebar; }
+.item3 { grid-area: main; }
+.item4 { grid-area: footer; }
+.item5 { grid-area: extra; }
+
+/* Visually highlight grid lines */
+/* Adjust color or style as desired */
+.grid-container::after {
+  content: "";
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px; /* Same as grid-container */
+  background-color: rgba(0, 0, 0, 0.1); /* Light gray for lines */
+  place-self: end; /* Ensure grid lines are on top */
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item item1">Header</div>
+  <div class="grid-item item2">Sidebar</div>
+  <div class="grid-item item3">Main Content</div>
+  <div class="grid-item item4">Footer</div>
+  <div class="grid-item item5">Extra</div>
+</div>
+</body>
+</html>

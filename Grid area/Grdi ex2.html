@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Concepts Demonstration</title>
+<style>
+/* Grid container definition */
+.grid-container {
+  display: grid; /* Makes the element a grid container */
+  grid-template-columns: repeat(3, 1fr); /* Defines 3 columns of equal width */
+  grid-template-rows: repeat(2, 1fr); /* Defines 2 rows of equal height */
+  grid-gap: 10px; /* Adds spacing between grid items (optional) */
+  /* Grid line styles (optional) */
+  border: 1px solid #ccc; /* Adds a border around the entire grid */
+}
+
+/* Grid item styles */
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Specific grid item styles with different grid areas */
+.item1 { grid-area: 1 / 1 / 2 / 2; } /* Spans row 1, col 1, ends at row 2, col 2 */
+.item2 { grid-area: 2 / 2 / 3 / 3; } /* Spans row 2, col 2, ends at row 3, col 3 */
+
+/* Highlighting specific grid areas (optional) */
+.item1, .item2 {
+  border: 1px solid red; /* Adds a red border to the specified items */
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item">Cell 1, Row 1, Col 1</div>
+  <div class="grid-item">Cell 2, Row 1, Col 2</div>
+  <div class="grid-item">Cell 3, Row 1, Col 3</div>
+
+  <div class="grid-item">Cell 4, Row 2, Col 1</div>
+  <div class="grid-item item1">Item 1 (1 / 1 / 2 / 2)</div>
+  <div class="grid-item item2">Item 2 (2 / 2 / 3 / 3)</div>
+</div>
+</body>
+</html>

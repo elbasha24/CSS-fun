@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Track Sample</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px; /* Optional spacing between grid items */
+}
+
+/* Defining track sizes */
+
+/* 1. Fixed-width tracks */
+.row1 {
+  grid-template-columns: 100px 200px 150px; /* Three fixed-width columns */
+}
+
+/* 2. Fractional tracks */
+.row2 {
+  grid-template-columns: 1fr 2fr 1fr; /* Three columns with flexible widths based on fractions */
+}
+
+/* 3. Percentage tracks */
+.row3 {
+  grid-template-columns: 25% 50% 25%; /* Three columns with percentage widths */
+}
+
+/* 4. `minmax` for minimum and maximum widths */
+.row4 {
+  grid-template-columns: minmax(150px, 1fr) minmax(200px, 2fr) minmax(100px, 1fr); /* Flexible columns with minimum and maximum widths */
+}
+
+/* 5. `auto-fit` for automatic placement */
+.row5 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Items sized and placed automatically within available space */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <!-- The term "grid track" can refer to both grid columns and grid rows in CSS Grid Layout. Here's an example demonstrating different ways to define grid tracks: -->
+  <div class="grid-container row1">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+
+  <div class="grid-container row2">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+
+  <div class="grid-container row3">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+
+  <div class="grid-container row4">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+
+  <div class="grid-container row5">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2 (longer text)</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Track Samples</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px; /* Optional spacing between grid items */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+
+  <div class="grid-item">Item 4 (150px)</div>
+  <div class="grid-item">Item 5 (200px)</div>
+  <div class="grid-item">Item 6 (250px)</div>
+
+  <div class="grid-item">Item 7 (1fr)</div>
+  <div class="grid-item">Item 8 (2fr)</div>
+  <div class="grid-item">Item 9 (3fr)</div>
+
+  <div class="grid-item">Item 10 (min 200px, auto)</div>
+  <div class="grid-item">Item 11 (min 150px, auto)</div>
+  <div class="grid-item">Item 12 (fits available space)</div>
+</style>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Cells</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px; /* Optional spacing between grid items */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.cell-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item">
+    <span class="cell-label">Cell 1, Row 1, Col 1</span>
+    <p>Content for cell 1</p>
+  </div>
+  <div class="grid-item">
+    <span class="cell-label">Cell 2, Row 1, Col 2</span>
+    <p>Content for cell 2</p>
+  </div>
+  <div class="grid-item">
+    <span class="cell-label">Cell 3, Row 1, Col 3</span>
+    <p>Content for cell 3</p>
+  </div>
+
+  <div class="grid-item">
+    <span class="cell-label">Cell 4, Row 2, Col 1</span>
+    <p>Content for cell 4</p>
+  </div>
+  <div class="grid-item">
+    <span class="cell-label">Cell 5, Row 2, Col 2</span>
+    <p>Content for cell 5</p>
+  </div>
+  <div class="grid-item">
+    <span class="cell-label">Cell 6, Row 2, Col 3</span>
+    <p>Content for cell 6</p>
+  </div>
+</body>
+</html>

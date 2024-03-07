@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Cell Demonstration</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  grid-template-rows: repeat(2, 1fr); /* Creates 2 equal-height rows */
+  grid-gap: 10px; /* Optional spacing between grid items */
+  /* Grid line styles (optional) */
+  border: 1px solid #ccc; /* Adds a border around the entire grid */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Highlighting specific grid cells (optional) */
+.cell1, .cell2, .cell3, .cell4, .cell5, .cell6 {
+  border: 1px solid red; /* Adds a red border to specific cells */
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item cell1">Cell 1 (Row 1, Col 1)</div>
+  <div class="grid-item cell2">Cell 2 (Row 1, Col 2)</div>
+  <div class="grid-item cell3">Cell 3 (Row 1, Col 3)</div>
+
+  <div class="grid-item cell4">Cell 4 (Row 2, Col 1)</div>
+  <div class="grid-item cell5">Cell 5 (Row 2, Col 2)</div>
+  <div class="grid-item cell6">Cell 6 (Row 2, Col 3)</div>
+</div>
+</body>
+</html>
