@@ -1,0 +1,87 @@
+<!-- grid template area
+Show drafts
+
+The grid-template-areas property in CSS Grid Layout allows you to define named grid areas within your grid container. This provides a more semantic and readable way to position grid items compared to using explicit grid lines with grid-column and grid-row.
+
+Here's how it works:
+
+    Define Named Areas:
+        You use grid-template-areas on the grid container to specify a string representation of your desired grid layout.
+        Within the string, each cell in the grid is represented by a name, enclosed in quotes (e.g., "header", "main", "sidebar").
+        You arrange these names in a comma-separated list, mimicking the row structure of your grid.
+        Multiple lines within the string represent rows in the grid.
+
+    Assign Areas to Items:
+        Each grid item element can have a grid-area property set to the name of the area it should occupy within the grid.
+        By referencing the same name, you link the item to the corresponding area defined in grid-template-areas.
+
+Example:
+HTML -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Template Areas Example</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header"
+    "main sidebar";
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: #eee;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item header">Header</div>
+  <div class="grid-item main">Main Content</div>
+  <div class="grid-item sidebar">Sidebar</div>
+</body>
+</html>
+
+<!-- Use code with caution.
+
+Explanation:
+
+    The code defines two columns and uses grid-template-areas:
+        "header header": Creates two "header" areas in the first row.
+        "main sidebar": Creates a "main" area and a "sidebar" area in the second row.
+    Each grid item class references the corresponding area name using grid-area.
+
+Benefits of using grid-template-areas:
+
+    Improved Readability: Makes the layout structure more understandable, especially for complex grids.
+    Maintainability: Easier to modify the layout by changing area names in one place (grid-template-areas).
+    Flexibility: Areas can span multiple grid cells by repeating the name in the string definition.
+
+Additional Considerations:
+
+    The number of cells in each row of the grid-template-areas string should match the number of columns defined in grid-template-columns.
+    Empty cells can be represented by a single dot (".") in the string.
+    grid-template-areas works in conjunction with grid line properties (grid-column, grid-row) for more fine-grained control if needed.
+
+By effectively using grid-template-areas, you can create clear, maintainable, and well-structured CSS grid layouts with named regions for your content. -->

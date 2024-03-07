@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Auto-flow Example</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two explicit columns */
+  width: 400px; /* Set a width for better visualization */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.row-flow {
+  grid-auto-flow: row; /* Default behavior, fills rows */
+}
+
+.column-flow {
+  grid-auto-flow: column; /* Fills columns */
+}
+</style>
+</head>
+<body>
+<div class="grid-container row-flow">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+  <div class="grid-item">Item 6 (overflows to new row)</div>
+</div>
+
+<div class="grid-container column-flow">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+  <div class="grid-item">Item 6 (overflows to new column)</div>
+</style>
+</body>
+</html>
+
+<!-- The grid-auto-flow property in CSS Grid Layout controls the flow of grid items when there are more items than the explicitly defined grid tracks (rows or columns). It essentially determines how these additional items are placed within the grid.
+
+Available Values:
+
+    row (default): This is the default behavior. Items are placed by filling each row in turn, adding new rows if necessary. This creates a top-to-bottom flow, similar to how text flows in a document.
+
+    column: With this value, items are placed by filling each column in turn, adding new columns if needed. This creates a left-to-right flow, similar to how columns are added in a table.
+
+Example above -->
+<!-- Explanation:
+
+    The code creates two grids with the same content but different grid-auto-flow values.
+    In the first grid with row-flow (default), items fill rows first, then create a new row for overflow.
+    In the second grid with column-flow, items fill columns first, then create a new column for overflow.
+
+Choosing the right grid-auto-flow value depends on your desired layout:
+
+    Use row (default) for a top-to-bottom flow, similar to a typical document or webpage layout.
+    Use column for a left-to-right flow, which might be suitable for certain image galleries or data tables.
+
+Additional Considerations:
+
+    grid-auto-flow only affects the placement of additional items that don't fit within the explicitly defined grid tracks.
+    It interacts with grid-auto-fill (discussed previously), which can further influence how empty spaces are handled within the grid.
+    Consider using grid-template-rows or grid-template-columns to explicitly define more rows or columns if you don't want the grid to automatically add them using grid-auto-flow.
+
+By understanding grid-auto-flow, you can control how excess grid items are positioned within your layout, achieving the desired visual structure for your content. -->
