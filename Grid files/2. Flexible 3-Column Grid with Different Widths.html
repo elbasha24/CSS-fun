@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexible Grid</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item">Item 1 (wider)</div>
+  <div class="grid-item">Item 2 (narrower)</div>
+  <div class="grid-item">Item 3 (widest)</div>
+</div>
+</body>
+</html>

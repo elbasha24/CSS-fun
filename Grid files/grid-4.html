@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+.grid-item {
+  background-color: lightgreen;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.header {
+  grid-row: 1;
+  grid-column: span 2; /* Spans across two columns */
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<!-- Grid with named lines: -->
+<div class="grid-container">
+  <div class="grid-item header">Header</div>
+  <div class="grid-item">Content 1</div>
+  <div class="grid-item">Content 2</div>
+</div>
+
+</body>
+</html>

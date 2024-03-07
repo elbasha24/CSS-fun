@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      .item-a {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .item-b {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .item-c {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item-a">Item A</div>
+      <div class="item-b">Item B</div>
+      <div class="item-c">Item C</div>
+    </div>
+  </body>
+</html>
+
+
+<!-- **Explanation:**
+
+* The `.container` element has a `display` property set to `grid`, which enables grid layout.
+* The `grid-template-columns` and `grid-template-rows` properties define the grid columns and rows.
+* The `repeat(3, 1fr)` and `repeat(2, 1fr)` expressions specify the column and row spans, respectively.
+* The `.item-a` element spans 2 columns and 2 rows, occupying the entire grid.
+* The `.item-b` and `.item-c` elements span 1 column and 1 row each, positioned in their respective columns and rows.
+
+**Notes:**
+
+* The `fr` unit is a unit of measure for grid items that specifies a fraction of the available space in the grid.
+* The `span` property allows an item to occupy multiple columns or rows.
+* The `grid-column` and `grid-row` properties define the columns and rows where the item should be placed.
+* The items are positioned in the grid according to their `grid-column` and `grid-row` values. -->

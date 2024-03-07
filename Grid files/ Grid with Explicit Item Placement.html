@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: span 2; /* Spans 2 columns */
+  grid-row-start: 1;
+  grid-row-end: span 2; /* Spans 2 rows */
+}
+
+.item2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.item3 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item item1">Large Item</div>
+  <div class="grid-item item2">Item 2</div>
+

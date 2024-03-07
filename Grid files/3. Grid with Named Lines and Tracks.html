@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: named-line-1 1fr named-line-2;
+  grid-template-rows: repeat(2, auto);
+  grid-named-lines: {
+    "named-line-1": 50px,
+    "named-line-2": 100px
+  }
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">Spanning 2 rows</div>
+  <div class="grid-item" style="grid-row: 2">Item 2</div>
+  <div class="grid-item">Item 3</div>
+</div>
+
+</body>
+</html>

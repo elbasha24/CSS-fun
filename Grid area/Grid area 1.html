@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid-Area Example</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px; /* Optional spacing between grid items */
+}
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="main">Main Content</div>
+  <div class="footer">Footer</div>
+</div>
+</body>
+</html>
+
+<!-- CSS:
+The CSS code defines the styles for the webpage. Here's a breakdown of the CSS code:
+
+.grid-container: This class defines the container as a grid with 2 columns and 2 rows, each taking up an equal fraction of the available space. There is also a 10-pixel gap between each grid item.
+.header: This class styles the header element. It has a background color of #333 (dark gray), white text, padding of 10 pixels, and text that is centered.
+.main: This class styles the main content element. It has a background color of #f0f0f0 (light gray), padding of 10 pixels, and takes up the entire space of the first row and second column.
+.sidebar: This class styles the sidebar element. It has a background color of #ddd (light gray), padding of 10 pixels, and takes up the entire space of the first row and first column.
+.footer: This class styles the footer element. It has a background color of #333 (dark gray), white text, padding of 10 pixels, and text that is centered.
+When the HTML and CSS code are combined, they create a webpage with a grid layout that looks like this:
+
+|-----------------|-----------------| | | | | Header | Main Content |
+
+Sidebar	Footer
+-----------------	-----------------
+The header and footer elements each take up the full width of the page, while the main content and sidebar elements are each confined to their respective grid areas.
+
+
+
+ -->
