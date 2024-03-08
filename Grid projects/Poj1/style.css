@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+/* select all classes with box- */
+*[class^="box-"]{
+  float: left;
+  width: calc(100% / 4); /* 4 columns in a row, adjust as needed */
+  height: 250px;
+  background-color: #eee;
+  color: #666;
+  text-align: center;
+  line-height: 250px;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.box-1{background:#f99;}
+.box-2{background:#9cf;}
+.box-3{background:#ff9;}
+.box-4{background:#99f;}
+
+/* clear floats after each box and add a new row */
+.box-container::after{
+  content:"";
+  display:block;
+  clear:both;
+}

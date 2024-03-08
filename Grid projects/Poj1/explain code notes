@@ -1,0 +1,36 @@
+/* Reset some default styles and apply common styles globally */
+* {
+    margin: 0;                                   <!-- Remove default margins -->
+    padding: 0;                                  <!-- Remove default padding -->
+    box-sizing: border-box;                       <!-- Include padding and borders in element dimensions -->
+    font-size: 30px;                              <!-- Default font size for all elements -->
+}
+
+/* Select all elements with class names starting with "box-" */
+*[class^="box-"], [class*=" box-"] {
+    float: left;                                 <!-- Float elements next to each other -->
+    width: calc(100% / 4);                        <!-- Calculate width based on number of columns -->
+    height: 250px;                                <!-- Set fixed height for boxes -->
+    background-color: #eee;                        <!-- Light gray background color -->
+    color: #666;                                  <!-- Dark grey text color -->
+    text-align: center;                            <!-- Center text horizontally -->
+    line-height: 250px;                            <!-- Vertically align text within the box -->
+    position: relative;                            <!-- Prepare for potential position modifications -->
+    top: 0;                                       <!-- Reset vertical positioning -->
+    right: 0;                                     <!-- Reset horizontal positioning -->
+    bottom: 0;                                    <!-- Reset vertical positioning -->
+    left: 0;                                      <!-- Reset horizontal positioning -->
+}
+
+/* Define four distinct background colors for each box */
+.box-1 { background: #f99; }    /* Red background */
+.box-2 { background: #9cf; }    /* Greenish background */
+.box-3 { background: #ff9; }    /* Yellowish background */
+.box-4 { background: #99f; }    /* Blueish background */
+
+/* Clear floats after each box and start a new row */
+.box-container::after {
+    content: "";                                 <!-- Empty content -->
+    display: block;                               <!-- Display empty content as a block -->
+    clear: both;                                  <!-- Clear floating elements -->
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Define the DOCTYPE for HTML5 -->
+<html lang="en">
+<head>
+    <!-- Specify the character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the HTML document -->
+    <title>Navigation Menu</title>
+    <!-- Add internal CSS styles -->
+    <style>
+        /* Style the body element */
+        body {
+            margin: 0;                          <!-- Remove default margins -->
+            font-family: Arial, sans-serif;     <!-- Set the font family -->
+            display: flex;                      <!-- Make the body a flex container -->
+            flex-direction: column;             <!-- Arrange children along the vertical axis -->
+            align-items: center;                 <!-- Align children horizontally centered -->
+            min-height: 100vh;                  <!-- Ensure full height of the viewport -->
+            background-color: #f5f5f5;           <!-- Set the background color -->
+        }
+
+        /* Style the navigation menu container */
+        .nav-menu {
+            display: flex;                       <!-- Make the container a flex container -->
+            list-style-type: none;                <!-- Remove default list styling -->
+            gap: 20px;                           <!-- Add space between children -->
+            justify-content: center;              <!-- Horizontal centering of children -->
+            width: 100%;                         <!-- Full width of the viewport -->
+            padding: 20px 0;                     <!-- Add padding around the content -->
+            background-color: white;              <!-- Set the background color -->
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  <!-- Add subtle shadow beneath the container -->
+        }
+
+        /* Style the individual navigation links */
+        .nav-link {
+            display: flex;                        <!-- Make the container a flex container -->
+            align-items: center;                   <!-- Vertically align the contents -->
+            text-decoration: none;                 <!-- Remove underline from links -->
+            color: #333;                          <!-- Set the base text color -->
+            transition: color 0.3s ease-in-out;     <!-- Add smooth transition for hover effects -->
+        }
+
+        /* Change text color on hover */
+        .nav-link:hover {
+            color: #666;
+        }
+
+        /* Style the logo element */
+        .nav-logo {
+            font-weight: bold;                    <!-- Bold the font weight -->
+            font-size: 1.5rem;                    <!-- Increase the font size -->
+            margin-right: 10px;                   <!-- Add margin to the left side -->
+        }
+
+        /* Responsive design for smaller screens */
+        @media (min-width: 768px) {
+            .nav-menu {
+                flex-direction: row;
+                <!-- Arrange children horizontally on larger screens -->
+                justify-content: space-between;    <!-- Space out the children evenly -->
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header container -->
+    <header>
+        <!-- Navigation menu container -->
+        <ul class="nav-menu">
+            <!-- Repeat the '.nav-link' class for additional links -->
+            <!-- Logo and Home link -->
+            <li class="nav-link"><span class="nav-logo">Logo</span><a href="#home">Home</a></li>
+            <!-- About link -->
+            <li class="nav-link"><a href="#about">About</a></li>
+            <!-- Services link -->
+            <li class="nav-link"><a href="#services">Services</a></li>
+            <!-- Contact link -->
+            <li class="nav-link"><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+</body>
+</html>
