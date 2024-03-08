@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            width: 60%;
+            max-width: 700px;
+            background-color: #eaeaea;
+        }
+
+        .flex-item {
+            flex: 1;              /* Apply the 'flex' shorthand property */
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Comments explaining the flex properties */
+        /*
+         * The 'flex' property is a shorthand for 'flex-grow', 'flex-shrink', and 'flex-basis'.
+         * In this example, we set 'flex: 1' which means:
+         *   - 'flex-grow': 1 (the item will grow proportionately with other items in the container)
+         *   - 'flex-shrink': 1 (the item will shrink proportionately with other items in the container)
+         *   - 'flex-basis': auto (the initial size of the item will depend on its content and any padding/borders applied)
+         */
+    </style>
+</head>
+<body>
+    <h2>Flex Item Flex Property Example</h2>
+    <div class="flex-container">
+        <!-- Repeat the '.flex-item' class for additional items -->
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>

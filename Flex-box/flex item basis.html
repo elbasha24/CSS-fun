@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Here's an example of an HTML document with a flex container holding several child elements, demonstrating the usage of flex-basis property for controlling the initial size of each flex item: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            width: 60%;
+            max-width: 700px;
+            background-color: #eaeaea;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Set different flex-basis values for the items */
+        .item-small {
+            flex-basis: auto;
+        }
+
+        .item-medium {
+            flex-basis: calc(50% - 10px);
+        }
+
+        .item-large {
+            flex-basis: calc(100% + 10px);
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex Item Flex Basis Example</h2>
+    <div class="flex-container">
+        <div class="flex-item item-small">Small Item</div>
+        <div class="flex-item item-medium">Medium Item</div>
+        <div class="flex-item item-large">Large Item</div>
+    </div>
+</body>
+</html>
+<!-- In this example, we create a flex container with three child elements, each having different flex-basis values:
+
+The .item-small class uses the default auto value for flex-basis, making the item size dependent on its content and any padding or border applied.
+The .item-medium class uses a calculated percentage value of calc(50% - 10px), resulting in a flexible width that takes up roughly half of the container's space, excluding the gaps between items.
+The .item-large class also uses a calculated value of calc(100% + 10px), causing the item to span the entire container's width plus the adjacent gaps, effectively creating an overflow situation.
+When viewed in a web browser, you will notice how the sizes of the items differ based on their flex-basis settings. Adjust the width of your browser window to observe how the items behave when the container's width changes. -->
