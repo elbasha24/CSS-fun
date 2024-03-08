@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        /* Row direction */
+        .flex-row {
+            flex-direction: row;
+        }
+
+        /* Column direction */
+        .flex-column {
+            flex-direction: column;
+        }
+
+        /* Row reverse direction */
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Column reverse direction */
+        .flex-column-reverse {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex Direction Examples:</h2>
+    <p>Row:</p>
+    <div class="flex-container flex-row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Column:</p>
+    <div class="flex-container flex-column">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Row Reverse:</p>
+    <div class="flex-container flex-row-reverse">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Column Reverse:</p>
+    <div class="flex-container flex-column-reverse">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #eee;
+            padding: 20px;
+            height: 200px;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        /* stretch: Stretches all items to fill the container */
+        .align-stretch {
+            align-items: stretch;
+        }
+
+        /* flex-start: Aligns items to the start line */
+        .align-flex-start {
+            align-items: flex-start;
+        }
+
+        /* flex-end: Aligns items to the end line */
+        .align-flex-end {
+            align-items: flex-end;
+        }
+
+        /* center: Centers items along the line */
+        .align-center {
+            align-items: center;
+        }
+
+        /* base-line: Aligns items so that their baselines align */
+        .align-base-line {
+            align-items: baseline;
+        }
+
+        /* first-baseline: Aligns items so that their first baselines align */
+        .align-first-baseline {
+            align-items: flex-start;
+        }
+
+        /* last-baseline: Aligns items so that their last baselines align */
+        .align-last-baseline {
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h2>Align Items Examples:</h2>
+    <p>stretch: Stretches all items to fill the container</p>
+    <div class="flex-container align-stretch">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>flex-start: Aligns items to the start line</p>
+    <div class="flex-container align-flex-start">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>flex-end: Aligns items to the end line</p>
+    <div class="flex-container align-flex-end">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>center: Centers items along the line</p>
+    <div class="flex-container align-center">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>base-line: Aligns items so that their baselines align</p>
+    <div class="flex-container align-base-line">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>first-baseline: Aligns items so that their first baselines align</p>
+    <div class="flex-container align-first-baseline">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>last-baseline: Aligns items so that their last baselines align</p>
+    <div class="flex-container align-last-baseline">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>
+
+<!-- In this example, we demonstrate seven variations of align-items:
+
+stretch: Stretches all items to fill the container
+flex-start: Aligns items to the start line
+flex-end: Aligns items to the end line
+center: Centers items along the line
+base-line: Aligns items so that their baselines align
+first-baseline: Aligns items so that their first baselines align
+last-baseline: Aligns items so that their last baselines align -->

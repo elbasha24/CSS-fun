@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #eee;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        /* flex-start: Content aligned at the start line */
+        .align-content-flex-start {
+            align-content: flex-start;
+        }
+
+        /* flex-end: Content aligned at the end line */
+        .align-content-flex-end {
+            align-content: flex-end;
+        }
+
+        /* center: Content centered along the line */
+        .align-content-center {
+            align-content: center;
+        }
+
+        /* space-between: Space evenly distributed between lines */
+        .align-content-space-between {
+            align-content: space-between;
+        }
+
+        /* space-around: Space evenly distributed around lines */
+        .align-content-space-around {
+            align-content: space-around;
+        }
+
+        /* space-evenly: Space evenly distributed around lines */
+        .align-content-space-evenly {
+            align-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h2>Align Content Examples:</h2>
+    <p>flex-start: Content aligned at the start line</p>
+    <div class="flex-container align-content-flex-start">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>flex-end: Content aligned at the end line</p>
+    <div class="flex-container align-content-flex-end">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>center: Content centered along the line</p>
+    <div class="flex-container align-content-center">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>space-between: Space evenly distributed between lines</p>
+    <div class="flex-container align-content-space-between">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>space-around: Space evenly distributed around lines</p>
+    <div class="flex-container align-content-space-around">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>space-evenly: Space evenly distributed around lines</p>
+    <div class="flex-container align-content-space-evenly">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>
+<!-- In this example, we demonstrate six variations of align-content:
+
+flex-start: Content aligned at the start line
+flex-end: Content aligned at the end line
+center: Content centered along the line
+space-between: Space evenly distributed between lines
+space-around: Space evenly distributed around lines
+space-evenly: Space evenly distributed around lines -->

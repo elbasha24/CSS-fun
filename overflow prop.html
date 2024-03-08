@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property Example</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;
+            overflow: auto; /* Change 'auto' to other values to see different behaviors */
+        }
+
+        .child {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
+
+<!-- In CSS, the overflow property determines what happens to an element's content if it cannot fit inside the element's box. There are several possible values for the overflow property:
+
+visible - This value allows the content to be clipped by the parent element if it overflows, but still visible outside the element. It doesn't generate scrolling mechanisms or any other effects.
+hidden - With this value, the excess content is not shown at all, even if it extends beyond the element's boundary. No scrolling mechanism is generated.
+scroll - When set to scroll, the browser adds both vertical and horizontal scroll bars to the element, allowing users to scroll through the content even if it exceeds the size of the element. By default, only one scroll bar appears if either the width or height surpasses the content size, depending on which dimension is greater. However, you can force both scroll bars to appear regardless of the direction of overflow by adding the following rule: overflow-x: auto; overflow-y: auto;.
+auto - If the content does not exceed the size of the element, nothing special occurs. However, if the content overflows the element's boundaries, browsers automatically choose between clipping (similar to hidden) or adding scroll bars (like scroll), usually depending on whether the excess content fits into the viewport.
+Here's a quick example to demonstrate the overflow property: -->

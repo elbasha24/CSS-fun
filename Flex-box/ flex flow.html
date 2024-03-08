@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        /* Flow-row: Row direction, no line wrapping */
+        .flex-flow-row {
+            flex-flow: row nowrap;
+        }
+
+        /* Flow-col: Column direction, no line wrapping */
+        .flex-flow-col {
+            flex-flow: column nowrap;
+        }
+
+        /* Flow-row-rev: Row direction, reverse order */
+        .flex-flow-row-rev {
+            flex-flow: row-reverse nowrap;
+        }
+
+        /* Flow-col-rev: Column direction, reverse order */
+        .flex-flow-col-rev {
+            flex-flow: column-reverse nowrap;
+        }
+
+        /* Flow-row-wrapped: Row direction, line wrapping */
+        .flex-flow-row-wrapped {
+            flex-flow: row wrap;
+        }
+
+        /* Flow-col-wrapped: Column direction, line wrapping */
+        .flex-flow-col-wrapped {
+            flex-flow: column wrap;
+        }
+
+        /* Flow-row-rev-wrapped: Row direction, reverse order, line wrapping */
+        .flex-flow-row-rev-wrapped {
+            flex-flow: row-reverse wrap;
+        }
+
+        /* Flow-col-rev-wrapped: Column direction, reverse order, line wrapping */
+        .flex-flow-col-rev-wrapped {
+            flex-flow: column-reverse wrap;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex Flow Examples:</h2>
+    <p>Flow-row: Row direction, no line wrapping.</p>
+    <div class="flex-container flex-flow-row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-col: Column direction, no line wrapping.</p>
+    <div class="flex-container flex-flow-col">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-row-rev: Row direction, reverse order, no line wrapping.</p>
+    <div class="flex-container flex-flow-row-rev">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-col-rev: Column direction, reverse order, no line wrapping.</p>
+    <div class="flex-container flex-flow-col-rev">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-row-wrapped: Row direction, line wrapping.</p>
+    <div class="flex-container flex-flow-row-wrapped">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-col-wrapped: Column direction, line wrapping.</p>
+    <div class="flex-container flex-flow-col-wrapped">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-row-rev-wrapped: Row direction, reverse order, line wrapping.</p>
+    <div class="flex-container flex-flow-row-rev-wrapped">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <p>Flow-col-rev-wrapped: Column direction, reverse order, line wrapping.</p>
+    <div class="flex-container flex-flow-col-rev-wrapped">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+</body>
+</html>
+
+
+<!-- In this example, we demonstrate eight variations of flex-flow:
+
+Flow-row: Row direction, no line wrapping
+Flow-col: Column direction, no line wrapping
+Flow-row-rev: Row direction, reverse order, no line wrapping
+Flow-col-rev: Column direction, reverse order, no line wrapping
+Flow-row-wrapped: Row direction, line wrapping
+Flow-col-wrapped: Column direction, line wrapping
+Flow-row-rev-wrapped: Row direction, reverse order, line wrapping
+Flow-col-rev-wrapped: Column direction, reverse order, line wrapping -->

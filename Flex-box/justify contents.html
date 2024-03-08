@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        /* flex-start: Content aligned to the start line */
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+
+        /* flex-end: Content aligned to the end line */
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+
+        /* center: Content centered along the line */
+        .justify-center {
+            justify-content: center;
+        }
+
+        /* space-between: Equal space around the content lines */
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        /* space-around: Equal space around the content lines */
+        .justify-space-around {
+            justify-content: space-around;
+        }
+
+        /* space-evenly: Even space around the content lines */
+        .justify-space-evenly {
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h2>Justify Content Examples:</h2>
+    <p>flex-start: Content aligned to the start line</p>
+    <div class="flex-container justify-flex-start">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>flex-end: Content aligned to the end line</p>
+    <div class="flex-container justify-flex-end">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>center: Content centered along the line</p>
+    <div class="flex-container justify-center">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>space-between: Equal space around the content lines</p>
+    <div class="flex-container justify-space-between">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>space-around: Equal space around the content lines</p>
+    <div class="flex-container justify-space-around">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>space-evenly: Even space around the content lines</p>
+    <div class="flex-container justify-space-evenly">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>

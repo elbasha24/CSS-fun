@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            height: 100vh; /* Adjust the height as needed */
+            width: 100%; /* Adjust the width as needed */
+        }
+
+        .header, .nav, .content, .sidebar, .footer {
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="nav">Navigation</div>
+        <div class="content">Content Area</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
+
+<!-- In this example, I used the `repeat()` function inside the `grid-template-columns` property to create three equal columns. Additionally, I added some basic styling to make it more visually appealing. Feel free to modify the styles according to your preferences. -->

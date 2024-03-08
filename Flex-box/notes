@@ -1,0 +1,149 @@
+flex can be one of 4:
+1.display:block;
+2.display:float; can float the text to the right so that the img can be to the left.
+3.postion :absolute; and top/right values will position it in a corner.
+4.display:table; / display:table-cell; - this method is not recommended because you have to use extra markup.
+
+flex-box has container and items.
+flex-box is defaulted to row.
+
+container properties are:
+    -display: flex; (this makes the parent a flex-container)
+    -justify-content: space-between; (space evenly between the child elements)
+    -align-items: center; (center all the child elements vertically)
+    -flex-direction:row; or column; (defines how the children will flow in the container).
+    -flex-direction:column-reverse; will reverse the column down-up
+    -flex-direction:row-reverse;  will reverse the row left-right
+
+item properties are:
+    -flex:1; (give equal size to each of the child element, they will share equally)
+    -flex-basis: auto | length | % ; (sets the initial size for the content before it's distributed)
+    -flex-shrink: number ; (specifies how much the item should shrink if necessary)
+    -flex-grow: number ; (specifies by how much the item should grow)
+
+flex-box has the below layouts:
+Flex direction : row
+|   A     B     C  |
+|----------- --- ---
+|  1     2     3  |
+
+Flex direction : column
+|   A
+|---
+|  1
+|---
+|  2
+|---
+|  3
+
+Flex Wrap property : nowrap is the (default value), wrap , wrap-reverse.
+nowrap will shrink column items to fit the same row.
+Nowrap means that the child elements will always stay within the confinement of the container. If there isn't enough room for all then they will move to next row.
+wrap will allow the items to go on new line if there isn't enough room.
+flex-wrap. wrap-reverse will  do the opposite of wrap.
+flex-flow : flex-direction + flex-wrap.
+            Example : flex-flow: row wrap;
+                     This means that the main axis will be a row and the cross axis will also be a row. And then it will start wrapping from
+                       This means that the main axis will be a row and the cross axis will also be a row.
+
+Flex Grow & Shrink :
+
+what is flex-flow?
+flex-flow  is used to define both the main axis and the cross axis. It consists of two values separated by a whitespace.
+It’s just shorthand for the flex-direction and flex-wrap properties. So you can combine them with the following syntax:
+flex-flow row rap;
+This means that the main axis will be a row and allow wrap.
+
+justify-content: space-between / space-around / space-evenly / start / end / center / stretch .
+it has flex end, flex start, flex center etc..
+space-between  will give equal space between the elements.
+space-around  will give equal space around the elements.
+stretch will make all the elements take up full available space.
+center aligns them in the middle.
+start makes the first one at the beginning and end makes the last one at the end.
+
+align-items : flex-start / flex-end / center / baseline / stretch.
+aligin-iems  determines how the items are aligned along the cross axis(vertical).
+align-items :  stretch by default which makes all the item take up full height.
+               If you set it to flex-start or flex-end then it will push those items towards start or end respectively.
+               If you set it to flex-start or flex-end then it will push those element towards the top/bottom of their container.
+               If you want to have an image with text next to it and you want the image to resize according to its content then use align-self:
+               If you want your content to be centered vertically then use align-items:center;
+
+Align self can be used per element basis. It overrides the align-items for each individual element.
+Example : <div style="align-self:flex-start;"> </div>
+          The above div will be aligned to the start even though we have set align-items:center; in the parent container.
+lign-items: baseline  | stretch | flex-start | flex-end | center | space-between | space-around | space-evenly;
+
+align-content  : stretch / flex-start / flex-end / center / space-around / space-between / space-evenly.
+It determines how multiple lines of items should be aligned along the cross axis(vertical) if they overflow the container.
+it comes in effect only if there are more than a row.
+It distributes the lines inside the container.
+If it is set to stretch, it will try to make all the lines have equal height.
+If it is set to flex-start or flex-end, it will push everything towards the start or end.
+If it is set to center, it will put everything in the middle.
+If it is set to space-around or space-between, it will add equal space between the lines.
+
+The order of the properties matter as well. The browser reads from top to bottom so putting display:flex at the bottom might not work because it is set to space-evenly,
+Order property : Used to change the order of the elements in the layout.
+The smaller number goes first.
+
+Visibility Property : hidden , visible (default)
+hidden hides the element but still takes up space.
+visible does not hide the element but does not show either.
+
+
+
+ex1:
+display:flex;
+justify-content:space-evenly; will align all items in row, equal space.
+we have container's items.
+
+flex-box props are:
+    1. display //use for container
+    2. flex-direction.//use for container
+    3. flex-wrap.//use for container
+    4. flex-flow.//use for container
+    5. justify-content.//use for container
+    6. align-items.//use for container
+    7. align-self.//use for container
+    8. align-content.//use for container
+    9. order. //use for item , put them in order rom 1 to x
+    11. flex-shrink.//use for item . will let the item in flexbox grow or shrink.
+    By default they are same i.e., 1.
+    10. visibility. //use for
+    12. flex-basis.//use for item
+    13. max-flex-basis.//use for item
+    14. flex.
+    15. align-self.
+ Sure, here's a brief explanation of each CSS Flexbox property:
+
+1. `display`: This property is used to set an element as a flex container or item. A value of "flex" makes an element into a flex container, and "inline-flex" does the same but for inline elements. Values of "none", "contents", or any other invalid values make the element behave normally (without flex properties).
+
+2. `flex-direction`: Determines the direction in which flexible items are placed within the flex container. Possible values include "row" (left-to-right), "row-reverse" (right-to-left), "column" (top-to-bottom), and "column-reverse" (bottom-to-top).
+
+3. `flex-wrap`: Controls if lines should be wrapped before resizing the containers. The possible values are "nowrap" (no line wrapping), "wrap" (line wrapping occurs when there isn’t enough space in the current line), "wrap-reverse" (lines wrap from right to left), and "inherit".
+
+4. `flex-flow`: Is a shorthand property that sets both `flex-direction` and `flex-wrap`. For example, "row nowrap" would apply "row" to `flex-direction`, and "nowrap" to `flex-wrap`.
+
+5. `justify-content`: Aligns the items along the main axis (defined by `flex-direction`) of the container. Values include "flex-start" (beginning of the line), "flex-end" (end of the line), "center" (middle of the line), "space-between" (spaces between items), "space-around" (equal spacing around items), and "space-evenly" (equally distributed spacing).
+
+6. `align-items`: Aligns the children along the cross axis (perpendicular to the `flex-direction`). Values are similar to those of `justify-content`, including "stretch" (default), "flex-start", "flex-end", "center", "baseline" (for text only), and "initial".
+
+7. `align-self`: Overrides the `align-items` property applied on its parent and applies alignment to an individual child. It works similarly to `align-items` with additional values like "auto" (use `align-items` instead) and "contain" (similar to `object-fit: contain` for images).
+
+8. `align-content`: Used when `flex-wrap` is "wrap" to control vertical alignment of multiple lines of items. Similar values to `justify-content` include "flex-start", "flex-end", "center", "space-between", "space-around", and "space-evenly".
+
+9. `order`: Sets the z-index for positioning purposes within the flex container. An integer value specifies the ordering; lower numbers come first. Default value is 0.
+
+10. `flex-grow`: Defines how much an element should grow relative to the rest of the children in the container. When space is available, it distributes this extra space based on the growth factor.
+
+11. `flex-shrink`: Specifies how much an element should shrink relative to the other children when there isn't enough space. Smaller numbers mean less shrinking.
+
+12. `flex-basis`: Sets the initial size of an element before any growth or shrinking happens. Can be specified in pixels, percentages, or other length units.
+
+13. `max-flex-basis`: Limits the maximum width/height that an element can reach even after growing.
+
+14. `flex`: Shorthand property for setting `flex-grow`, `flex-shrink`, and `flex-basis` at once. Example: "1 1 auto" means grow equally with others (first number), don't shrink (second number), and use original size as starting point (third number).
+
+15. `align-self`: Same as mentioned earlier; overrides `align-items` for an individual child.

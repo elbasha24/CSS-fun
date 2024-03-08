@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Here's an example of an HTML document containing a flex container with multiple items, where some items are given specific growth factors while others are allowed to shrink based on the available space: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            width: 60%;
+            max-width: 700px;
+            background-color: #f5f5f5;
+        }
+
+        .flex-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grow {
+            flex-grow: 1;
+        }
+
+        .shrink {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex Item Grow & Shrink Example</h2>
+    <div class="flex-container">
+        <div class="flex-item grow">Growing Item</div>
+        <div class="flex-item shrink">Shrinking Item</div>
+    </div>
+</body>
+</html>
+
+<!-- In this example, we create a flex container with two child elements. Both items share the same parent, allowing them to be part of the same flex context. We then use the flex-grow and flex-shrink properties to control how they expand or contract based on the available space:
+
+The .grow class applies a flex-grow value of 1, meaning the item will grow proportionally with other growing items in the container when resized. In this case, both items have the same flex-grow value, so they will grow equally if the container becomes wider.
+The .shrink class applies a flex-shrink value of 0, meaning the item will not shrink when the container becomes smaller. This causes the item to maintain its size regardless of changes in container dimensions.
+As you resize your browser window, observe how the growing item expands or contracts relative to the non-expanding item. Keep in mind that this effect might not be visible if the window is already larger than the maximum width set for the flex container. You can adjust the max-width property to see the behavior change at different window sizes. -->
+
+<!-- expalining the code -->
+
+
+<!-- This code is an example of an HTML document that demonstrates the usage of CSS Flexbox properties to control the growth and shrinkage of items within a flex container. Here's a breakdown of the code:
+
+DOCTYPE and HTML: The code starts with the standard HTML5 doctype declaration and the HTML structure with the language set to English.
+
+Head and Meta tags: The head section contains meta tags for character encoding (UTF-8) and viewport settings (width and initial scale).
+
+Style and Body: The style tag is used to define CSS rules for the document. The body tag has some basic styling for margin, font, and background color.
+
+Flex Container: The .flex-container class is defined with the following properties:
+
+display: flex: This makes the element a flex container, allowing its direct children to behave as flex items.
+justify-content: center: This centers the flex items along the main axis (horizontally by default).
+align-items: center: This centers the flex items vertically along the cross axis.
+flex-direction: column: This sets the main axis to be vertical, making the flex items stack on top of each other.
+gap: 10px: This adds space between flex lines.
+width: 60% and max-width: 700px: These properties set the width of the container and limit its maximum width.
+background-color: #f5f5f5: This sets the background color of the container.
+Flex Items: The .flex-item class is defined with the following properties:
+
+flex: 1: This is a shorthand property for flex-grow, flex-shrink, and flex-basis. Here, it means that the items will grow and shrink equally if needed.
+text-align: center: This centers the text within the flex items.
+padding: 20px: This adds padding to the flex items.
+box-sizing: border-box: This includes the padding and border in the element's total width and height.
+border: 1px solid #ccc, border-radius: 5px, and background-color: white: These properties add borders, -->

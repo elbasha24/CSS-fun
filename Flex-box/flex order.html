@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: randomColor();
+        }
+
+        .box--lowest {
+            order: 3; /* Place this box at the bottom */
+        }
+
+        .box--lower {
+            order: 2; /* Place this box just above the lowest one */
+        }
+
+        .box--normal {
+            order: 1; /* Place this box next to the lowest one */
+        }
+
+        .box--highest {
+            order: 0; /* No special order, appears naturally */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box--lowest"></div>
+        <div class="box box--lower"></div>
+        <div class="box box--normal"></div>
+        <div class="box box--highest"></div>
+    </div>
+</body>
+</html>

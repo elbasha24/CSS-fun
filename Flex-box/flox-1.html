@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex; /* 1 */
+            flex-direction: row; /* 2 */
+            flex-wrap: wrap; /* 3 */
+            justify-content: center; /* 5 */
+            align-items: stretch; /* 6 */
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .item {
+            margin: 10px;
+            padding: 20px;
+            background-color: lightblue;
+            box-sizing: border-box;
+        }
+
+        .small { flex-basis: 50px; /* 12 */ }
+        .medium { flex-basis: calc(100px + 20px); /* 12 */ }
+        .large { flex-grow: 2; /* 10 */ }
+
+        .red { order: -1; /* 9 */ }
+        .last { align-self: flex-end; /* 7 */ }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item small">Small Item</div>
+        <div class="item medium">Medium Item</div>
+        <div class="item large">Large Item</div>
+        <div class="item red">Red Item</div> <!-- Ordered last -->
+        <div class="item last">Last Item</div> <!-- Self aligned -->
+    </div>
+</body>
+</html>
+
+
+<!-- HTML:
+The HTML code defines the structure of the webpage. In this case, it creates a container with the class "grid-container" that will hold four elements: a header, a sidebar, the main content, and a footer.
+
+CSS:
+The CSS code defines the styles for the webpage. Here's a breakdown of the CSS code:
+
+.grid-container: This class defines the container as a grid with 2 columns and 2 rows, each taking up an equal fraction of the available space. There is also a 10-pixel gap between each grid item.
+.header: This class styles the header element. It has a background color of #333 (dark gray), white text, padding of 10 pixels, and text that is centered.
+.main: This class styles the main content element. It has a background color of #f0f0f0 (light gray), padding of 10 pixels, and takes up the entire space of the first row and second column.
+.sidebar: This class styles the sidebar element. It has a background color of #ddd (light gray), padding of 10 pixels, and takes up the entire space of the first row and first column.
+.footer: This class styles the footer element. It has a background color of #333 (dark gray), white text, padding of 10 pixels, and text that is centered.
+When the HTML and CSS code are combined, they create a webpage with a grid layout that looks like this:
+
+|-----------------|-----------------| | | | | Header | Main Content |
+
+Sidebar	Footer
+-----------------	-----------------
+The header and footer elements each take up the full width of the page, while the main content and sidebar elements are each confined to their respective grid areas. -->
